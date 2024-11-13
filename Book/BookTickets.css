@@ -1,0 +1,301 @@
+/* General Styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background color */
+}
+
+.book-tickets-container {
+  max-width: 960px;
+  width: 100%; /* Full width */
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Take full viewport height */
+  animation: fadeIn 0.5s ease; /* Fade in animation */
+}
+
+/* Header */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+  animation: slideIn 0.5s ease; /* Slide in animation */
+}
+
+/* Step Container */
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+/* Step 1: Trip Details Form */
+.step-1 label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards; /* Fade in animation */
+}
+
+.step-1 input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards; /* Fade in animation */
+  animation-delay: 0.2s; /* Delay for staggered effect */
+}
+
+.step-1 input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+/* Bus Selection (Step 2) */
+.step-2 {
+  text-align: center;
+}
+
+.bus-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.bus-option {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease forwards; /* Fade in animation */
+}
+
+.bus-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bus-option.selected {
+  border-color: #28a745;
+  box-shadow: 0 10px 20px rgba(40, 167, 69, 0.2);
+}
+
+.bus-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bus-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Seat Map (Step 3) */
+.step-3 {
+  text-align: center;
+}
+
+.seat-map {
+  display: flex;
+  justify-content: center; /* Center the sides */
+  margin: 20px auto;
+}
+
+.seat-side {
+  margin: 0 20px; /* Space between sides */
+  text-align: center;
+}
+
+.seat-side h4 {
+  margin-bottom: 10px; /* Space between title and buttons */
+}
+
+.seat-row {
+  display: flex;
+  flex-direction: column; /* Stack seats vertically */
+  align-items: center; /* Center buttons in the row */
+  margin: 5px 0; /* Space between rows */
+}
+
+.seat-map button {
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  margin: 5px 0; /* Vertical spacing for buttons */
+}
+
+.seat-map button:hover {
+  background-color: #ddd;
+  transform: scale(1.05); /* Slightly enlarge button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.seat-map button.occupied {
+  background-color: #ff4e4e;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat-map button.available {
+  background-color: #28a745;
+  color: white;
+}
+
+.seat-map button.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.seat-map button:disabled {
+  cursor: not-allowed;
+}
+
+/* Form Buttons */
+.next-btn, .confirm-btn, .back-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+.next-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.next-btn:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.next-btn:active {
+  transform: scale(0.98);
+}
+
+.confirm-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn:active {
+  transform: scale(0.98);
+}
+
+/* Confirmation Styling */
+.confirmation {
+  text-align: center;
+  margin: 20px 0;
+  animation: fadeIn 0.5s ease; /* Fade in animation */
+}
+
+.confirmation h3 {
+  font-size: 2rem;
+  color: #28a745;
+}
+
+.confirmation p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .seat-map {
+    flex-direction: column; /* Stack seats on smaller screens */
+  }
+
+  .seat-side {
+    margin: 10px 0; /* Space between stacked sides */
+  }
+
+  .bus-options {
+    flex-direction: column;
+  }
+
+  .bus-option {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bus-option {
+    width: 100%;
+    max-width: 200px;
+  }
+}

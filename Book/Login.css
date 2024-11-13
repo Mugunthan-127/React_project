@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  margin: 100px auto;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out; /* Animation on load */
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ede7e7;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #fff9f9;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.login-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+}
+
+.login-container input:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform effect */
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.login-container button:active {
+  background-color: #004494;
+  transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); } /* Fade in with upward movement */
+  to { opacity: 1; transform: translateY(0); }
+}

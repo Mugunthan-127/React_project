@@ -1,0 +1,185 @@
+/* General Home Page Styles */
+.home-page {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://i.pinimg.com/564x/2b/4c/63/2b4c638761cf60e12c391c342b7fb5f8.jpg') center/cover no-repeat; /* Set image as background */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bus-hero-bg.jpg') center/cover no-repeat; /* Hero background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none; /* Removed default border */
+  cursor: pointer; /* Pointer cursor for better UX */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added scale effect */
+}
+
+.cta-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative; /* Needed for overlay */
+  background: url('features-bg.jpg') center/cover no-repeat; /* Background for features section */
+  color: #333; /* Text color */
+}
+
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7); /* White overlay */
+  z-index: 1; /* Place overlay behind text */
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative; /* Ensure text is above the overlay */
+  z-index: 2; /* Bring text above the overlay */
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adjusted gap for better spacing */
+  flex-wrap: wrap;
+  position: relative; /* Ensure features are above the overlay */
+  z-index: 2; /* Bring features above the overlay */
+}
+
+.feature {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px; /* Slightly wider feature boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added scale effect */
+}
+
+.feature:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  background: url('contact-bg.jpg') center/cover no-repeat; /* Background for contact section */
+  color: #333; /* Text color for readability */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Responsive font size */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Responsive font size */
+  }
+
+  .cta-btn {
+    font-size: 1rem; /* Responsive button size */
+    padding: 10px 20px; /* Responsive padding */
+  }
+}

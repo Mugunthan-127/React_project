@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+ 
+  background-image: url(https://w0.peakpx.com/wallpaper/732/469/HD-wallpaper-temsa-maraton-2020-exterior-passenger-bus-european-buses-tourist-bus-mountain-road-bus.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+
+}
+
+.navbar {
+  background-color: #8bdfe2;
+  padding: 5px ;
+  position: fixed;
+  color: #fff;
+  top: 0;
+  width: 100%;
+  left:0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  font-family:'Times New Roman', Times, serif;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px; 
+}
+
+nav ul li a {
+  color: #000000c2; 
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: url('your-background-image.jpg') no-repeat center center/cover;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 80px; 
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff; 
+}
+
+.search-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.search-form input, .search-form button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px; 
+  border: 1px solid #ccc; 
+}
+
+.search-form button {
+  background-color: #ff6700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #e65c00;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    height: 60vh; 
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form input, .search-form button {
+    width: 100%; 
+    margin: 5px 0;
+  }
+}
